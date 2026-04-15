@@ -11,7 +11,7 @@ public class Person{
       Hobbies = new string[0];
    }
 
-   public string AddHobbies(params string[] hobbies){
+   public void AddHobbies(params string[] hobbies){
     string[] combined = new string[Hobbies.Length + hobbies.Length];
 
       for (int i = 0; i < Hobbies.Length; i++)
