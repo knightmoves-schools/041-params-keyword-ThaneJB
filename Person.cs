@@ -12,7 +12,20 @@ public class Person{
    }
 
    public string AddHobbies(params string[] hobbies){
-    Hobbies = hobbies;
+    string[] combined = new string[Hobbies.Length + hobbies.Length];
+
+      for (int i = 0; i < Hobbies.Length; i++)
+      {
+         combined[i] = Hobbies[i];
+      }
+
+      for (int i = 0; i < hobbies.Length; i++)
+      {
+         combined[Hobbies.Length + i] = hobbies[i];
+      }
+
+      Hobbies = combined;
+   }
 
    }
    
