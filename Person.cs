@@ -8,18 +8,12 @@ public class Person{
    public Person(string firstName, string lastName){
       FirstName = firstName;
       LastName = lastName;
+      Hobbies = new string[0];
    }
 
-   public string AddHobbies(params string[] Hobbies){
-         string output = "";
-         foreach(string Hobbie in Hobbies){
-            if(output.Length > 0){
-               output += ", ";
-            }
-               output += Hobbie;
-         }
-         return $"{output}";
+   public string AddHobbies(params string[] hobbies){
+    Hobbies = hobbies;
+
    }
-   
    
 }
